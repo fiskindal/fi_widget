@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 extension InputDecorationExtension on BuildContext {
   static InputDecoration defaultInputDecoration(BuildContext context,
       {String? errorText,
-      required double deviceWidth,
+      required double boxConstraintsMaxWidth,
       required String hintText}) {
     return InputDecoration(
       fillColor: Color(0xFFF5F5F7),
@@ -17,7 +17,7 @@ extension InputDecorationExtension on BuildContext {
           width: 5.0,
         ),
       ),
-      constraints: BoxConstraints(maxWidth: deviceWidth),
+      constraints: BoxConstraints(maxWidth: boxConstraintsMaxWidth),
       hintText: hintText,
       errorText: errorText,
     );
